@@ -1,0 +1,195 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>COVID 19 Questionnaire Form</title>
+  <meta name="description" content="COVID 19 Questionnaire Form">
+  <meta name="author" content="Azhya Knox">
+  
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+  <div class="container"> <!-- start-->
+  <header id="head">
+    <h1 id="title">Toyota COVID-19 Survey Form</h1>
+    <p id="description"> To ensure that safety and health of all Toyota team members, contractors, visitors, and their families, please fill out our quick survey.</p>
+  </header>
+  <main id="main">
+    <form id="survey-form" name="myForm" action="#" onsubmit="return validateForm()" method="post">
+      <div class="form-group">
+      <label id="name-label" for="name">Name</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        class="form-control"
+        placeholder="Enter your name"/>
+    </div>
+      
+      <div class="form-group">
+      <label id="email-label" for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="form-control"
+        placeholder="Enter your Email"/>
+    </div>
+      
+      <div class="form-group">
+      <label id="number-label" for="number"
+        >Badge or Workday ID#:</label
+      >
+      <input
+        type="number"
+        name="id-number"
+        id="number"
+        min="000000"
+        max="999999"
+        class="form-control"
+        placeholder="Enter 6-digits only"
+      />
+    </div>
+      
+      <div class="form-group">
+      <p>Type of Personnel:</p>
+      <select id="dropdown" name="personnel-type" class="form-control">
+        <option disabled selected value>Select type</option>
+        <option value="team-member">Team Member</option>
+        <option value="contractor">Contractor</option>
+        <option value="vendor">Vendor</option>
+        <option value="visitor">Visitor</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+      
+      <div class="form-group">
+      <p>Have you or any one in your household have traveled to any of the CDC-restricted countries: South Korea, China, Europe?</p>
+      <label>
+        <input
+          name="user-travel"
+          value="yes"
+          type="radio"
+          class="input-radio"
+          checked
+        />Yes</label
+      >
+      <label>
+        <input
+          name="user-travel"
+          value="no"
+          type="radio"
+          class="input-radio"
+        />No</label
+      >
+    </div>
+      
+      <div class="form-group">
+      <p>Have you or any one in your household came in contact with someone who is a CDC-presumed or CDC-confirmed case of coronavirus in the last 14 days?</p>
+      <label>
+        <input
+          name="user-contact"
+          value="yes"
+          type="radio"
+          class="input-radio"
+          checked
+        />Yes</label
+      >
+      <label>
+        <input
+          name="user-contact"
+          value="no"
+          type="radio"
+          class="input-radio"
+        />No</label
+      >
+    </div>
+      
+      <div class="form-group">
+      <p>Have you experienced any of the following symptoms in the last 14 days: shortness of breath, fever of 100.4 or greater, cough, respiratory illness, headache?</p>
+      <label>
+        <input
+          name="user-symptons"
+          value="yes"
+          type="radio"
+          class="input-radio"
+          checked
+        />Yes</label
+      >
+      <label>
+        <input
+          name="user-symptons"
+          value="no"
+          type="radio"
+          class="input-radio"
+        />No</label
+      >
+    </div>
+      
+      <div class="form-group">
+      <p>
+        Did you carpool with someone to this site? <span class="hint"> (Check one)</span>
+      </p>
+
+      <label
+        ><input
+          name="carpool"
+          value="yes"
+          type="checkbox"
+          class="input-checkbox"
+        />Yes</label
+      >
+      <label
+        ><input
+          name="carpool"
+          value="no"
+          type="checkbox"
+          class="input-checkbox"
+        />No</label
+      >
+        <label
+        ><input
+          name="carpool"
+          value="preferNo"
+          type="checkbox"
+          class="input-checkbox"
+        />Prefer not to answer</label
+      >
+    </div>
+      
+      <div class="form-group">
+      <p id="comment-description">Any comments or suggestions?</p>
+      <textarea
+        id="comments"
+        class="input-textarea"
+        name="comment"
+        placeholder="Enter your comment here..."
+        cols="50" rows="5"
+      ></textarea>
+    </div>
+      
+      <div class="form-group">
+      <button type="submit" id="submit" class="submit-button">
+        Submit
+      </button>
+    </div>
+      
+    </form>
+  </main>
+  <footer id="foot">
+    <div>
+      <a href="https://www.toyota.com/" target="_blank">
+        <img src="https://pluspng.com/img-png/download-toyota-logo-png-images-transparent-gallery-advertisement-1574.png" alt="" style="width: 200px; height: 200px; margin: 20px;">
+      </a>
+    </div>
+  </footer>
+  </div> <!-- end container-->
+  <script src="js/scripts.js"></script>
+</body>
+</html>
